@@ -1,4 +1,4 @@
-![logo](_media/icon.svg)
+![logo](resources/logo.png)
 
 # GrantX Wiki <small>v2</small>
 
@@ -6,5 +6,5 @@
 
 - Scroll down to access the wiki.
 
-[Webste](https://demeng.dev/grantx)
+[Website](https://demeng.dev/grantx)
 [Discord](https://demeng.dev/discord)
