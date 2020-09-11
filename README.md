@@ -15,6 +15,7 @@ If you cannot find the answer to your question or issue on this wiki, please use
 * **Discord:** Join the official support Discord server by [clicking here](https://demeng.dev/discord) and open a ticket.
 * **Discussion Page:** Make a post in the "Discussion" section on GrantX's resource page on SpigotMC/MC-Market.
 
-### Private Support (urgent, payment-related, and licensing-related inquiries ONLY)
+### Private Support
+***URGENT AND PAYMENT-RELATED INQUIRIES ONLY!***
 * **Private Message:** Private message @Demeng on SpigotMC or MC-Market.
 * **Discord Direct Message:** Direct message Demeng#0001 on Discord.
