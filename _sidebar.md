@@ -1,3 +1,3 @@
 * [Overview](README.md)
-  * [Purchasing GrantX](README.MD#custom-support)
-  * [Customer Support](#/README?id=customer-support)
+  * [Purchasing GrantX](https://demeng7215.github.io/GrantX-Wiki/#/README?id=purchasing-grantx)
+  * [Customer Support](https://demeng7215.github.io/GrantX-Wiki/#/README?id=customer-support)
