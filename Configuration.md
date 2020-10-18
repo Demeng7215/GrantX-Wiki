@@ -8,7 +8,7 @@ A list of configuration files with their factory default values can be found in 
 Since GrantX focuses on GUI menus, there are many cases in the config files where you need to enter a material name. [Click here](https://github.com/Demeng7215/GrantX-Wiki/blob/master/Available%20Materials.java) for a list of valid materials.
 
 ## Placeholders
-A list of placeholders you can use in configuration files.
+A list of placeholders you can use in configuration files. Some placeholders may return the word "not applicable", depending on the situation (eg. %revoke-time% will return N/A if the grant has not been revoked yet).
 
 ### Grant Placeholders
 | Placeholder | Description |
@@ -20,6 +20,12 @@ A list of placeholders you can use in configuration files.
 | %target% | The username of the grant target player. |
 | %target-uuid% | The UUID of the target. |
 | %issuer% | The username of the grant issuer player (or the word "console"). |
-| %issuer-uuid% | The UUID of the issuer (or the word "not applicable"). |
-| %revoker% | The username of the grant revoker player (or the word "not applicable"). |
-| %revoker-uuid% | The UUID of the revoker (or the word "not applicable"). |
+| %issuer-uuid% | The UUID of the issuer. |
+| %revoker% | The username of the grant revoker player. |
+| %revoker-uuid% | The UUID of the revoker. |
+| %revoke-time% | The time of when the grant was revoked. |
+| %expiration% | The time of which the grant will expire (or the word "never"). |
+| %rank-{placeholder} | Use any rank placeholder by adding the **rank-** prefix to the placeholder. |
+| %server-{placeholder} | Use any server placeholder by adding the **server-** prefix to the placeholder. |
+| %duration-{placeholder} | Use any duration placeholder by adding the **duration-** prefix to the placeholder. |
+| %reason-{placeholder} | Use any reason placeholder by adding the **reason-** prefix to the placeholder. |
