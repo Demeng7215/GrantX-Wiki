@@ -48,3 +48,52 @@ A list of placeholders you can use in configuration files. Some placeholders may
 | %glow% | If this rank will glow in GUIs- Yes or No. |
 | %blacklisted-servers% | The servers where this rank cannot be chosen. |
 | %blacklisted-servers-count% | The number of servers where this rank cannot be chosen. |
+
+### Server Placeholders 
+| Placeholder | Description |
+|-------------|----------------------------------------------------------------|
+| %id% | The unique identifier of the rank. |
+| %real-name% | The real name (group/node) of the rank. |
+| %weight% | The weight of the rank. |
+| %slot% | The slot of the rank. |
+| %material% | The name of the material representing the rank. |
+| %display-name% | The display name of the rank. |
+| %stripped-display-name% | The display name of the rank, without color. |
+| %lore-type% | The type of lore- Default, Custom, None.
+| %permission% | The permission required to choose the rank. |
+| %dummy% | If this rank is a dummy- Yes or No. |
+| %grantable% | If this rank is grantable. Exact opposite of dummy. |
+| %glow% | If this rank will glow in GUIs- Yes or No. |
+
+### Duration Placeholders 
+| Placeholder | Description |
+|-------------|----------------------------------------------------------------|
+| %id% | The unique identifier of the rank. |
+| %time% | THe number of seconds this duration is worth. |
+| %weight% | The weight of the rank. |
+| %slot% | The slot of the rank. |
+| %material% | The name of the material representing the rank. |
+| %display-name% | The display name of the rank. |
+| %stripped-display-name% | The display name of the rank, without color. |
+| %lore-type% | The type of lore- Default, Custom, None.
+| %permission% | The permission required to choose the rank. |
+| %dummy% | If this rank is a dummy- Yes or No. |
+| %grantable% | If this rank is grantable. Exact opposite of dummy. |
+| %glow% | If this rank will glow in GUIs- Yes or No. |
+| %blacklisted-servers% | The servers where this rank cannot be chosen. |
+| %blacklisted-servers-count% | The number of servers where this rank cannot be chosen. |
+
+### Reason Placeholders 
+| Placeholder | Description |
+|-------------|----------------------------------------------------------------|
+| %id% | The unique identifier of the rank. |
+| %weight% | The weight of the rank. |
+| %slot% | The slot of the rank. |
+| %material% | The name of the material representing the rank. |
+| %display-name% | The display name of the rank. |
+| %stripped-display-name% | The display name of the rank, without color. |
+| %lore-type% | The type of lore- Default, Custom, None.
+| %permission% | The permission required to choose the rank. |
+| %dummy% | If this rank is a dummy- Yes or No. |
+| %grantable% | If this rank is grantable. Exact opposite of dummy. |
+| %glow% | If this rank will glow in GUIs- Yes or No. |
