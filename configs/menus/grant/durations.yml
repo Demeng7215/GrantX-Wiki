@@ -1,0 +1,109 @@
+# # # # # # # # # # # # # # # # # # # # # # # # # #
+#   ________                     __    ____  ___  #
+#  /  _____/___________    _____/  |_  \   \/  /  #
+# /   \  __\_  __ \__  \  /    \   __\  \     /   #
+# \    \_\  \  | \// __ \|   |  \  |    /     \   #
+#  \______  /__|  (____  /___|  /__|   /___/\  \  #
+#         \/           \/     \/             \_/  #
+# # # # # # # # # # # # # # # # # # # # # # # # # #
+# |
+# ---------------------------------------------------------------------------------------
+# Welcome to the official "Duration Selection" menu config file for GrantX!
+# This is where you can change how the duration selection menu looks.
+# If you are unsure of what something does: https://demeng.dev/grantx/docs
+# Stuck? Getting errors? Contact out support team at https://demeng.dev/discord.
+# Thank you for using GrantX!
+# ---------------------------------------------------------------------------------------
+
+config-version: 1
+
+# Should this menu be paged or just be one single menu?
+paged: false
+
+# The number of slots in the menu (per page).
+# Must be a multiple of nine, greater or equal to 9, and less than or equal to 54.
+size: 54
+
+# The title of the menu. Color codes are supported.
+# You can use the %target% placeholder for the target's username.
+title: "Select a Duration"
+
+# The item that will be used for the GUI's background. Set to "AIR" for no background item.
+background: "AIR"
+
+# Configuration for the separator, which is a row of items which separate the durations and page controls.
+# Ignore if the "paged" value at the top of this config is set to false.
+separator:
+  # Should GrantX add the separator?
+  enabled: true
+  # If the above setting is true- which of the GUI should the separator be in?
+  row: 5
+  # The material of the separator.
+  material: "GRAY_STAINED_GLASS_PANE"
+
+# Configuration for the "previous page" button in the menu.
+# Ignore if the "paged" value at the top of this config is set to false.
+previous-page-button:
+  # The slot that this button will be in.
+  slot: 46
+  # The material of the button.
+  material: "LIME_DYE"
+  # The display name of the button.
+  display-name: "&c< Previous Page"
+  # The lore of the item. Set as an empty list or put the first element as "none" to disable.
+  lore: [ ]
+  # If this item should have a fake (hidden) enchantment.
+  glow: true
+  # Overrides for the button if there are no more pages to go back to.
+  no-more-pages:
+    material: "GRAY_DYE"
+    display-name: "&7You are on the first page."
+    lore: [ ]
+    glow: false
+
+# Configuration for the "next page" button in the menu.
+# Ignore if the "paged" value at the top of this config is set to false.
+next-page-button:
+  slot: 54
+  material: "LIME_DYE"
+  display-name: "&aNext Page >"
+  lore: [ ]
+  glow: true
+  no-more-pages:
+    material: "GRAY_DYE"
+    display-name: "&7You are on the last page."
+    lore: [ ]
+    glow: false
+
+# The range of slots that may contain durations.
+# Ignore if the "paged" value at the top of this config is set to false.
+listing-range:
+  # The first slot of each page that will contain a duration.
+  start: 1
+  # The last slot of each page that will contain a duration.
+  end: 45
+
+# The default lore that will be used for each duration.
+default-lore:
+  - "&7&m-----------------------------------"
+  - "&aName: &f%stripped-display-name%"
+  - "&aTime: &f%time%"
+  - "&aDummy: &f%dummy%"
+  - "&aPermission: &f%permission%"
+  - "&7&m-----------------------------------"
+  - "&b&lClick to select this duration."
+
+# The button used if the duration is dummy or if the issuer does not have permission to select this duration.
+# Use %default% for the dummy duration's values. Cannot be used for glow.
+dummy-button:
+  material: "%default%"
+  display-name: "%default%"
+  lore:
+    - "&7&m-----------------------------------"
+    - "&6Name: &f%stripped-display-name%"
+    - "&6Time: &f%time%"
+    - "&6Dummy: &f%dummy%"
+    - "&6Permission: &f%permission%"
+    - "&7&m-----------------------------------"
+    - "&c&lYou cannot select this duration."
+  glow: false

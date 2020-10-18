@@ -1,0 +1,77 @@
+# # # # # # # # # # # # # # # # # # # # # # # # # #
+#   ________                     __    ____  ___  #
+#  /  _____/___________    _____/  |_  \   \/  /  #
+# /   \  __\_  __ \__  \  /    \   __\  \     /   #
+# \    \_\  \  | \// __ \|   |  \  |    /     \   #
+#  \______  /__|  (____  /___|  /__|   /___/\  \  #
+#         \/           \/     \/             \_/  #
+# # # # # # # # # # # # # # # # # # # # # # # # # #
+# |
+# ---------------------------------------------------------------------------------------
+# Welcome to the official "Grant Confirmation" menu config file for GrantX!
+# This is where you can change how the grant confirmation menu looks.
+# If you are unsure of what something does: https://demeng.dev/grantx/docs
+# Stuck? Getting errors? Contact out support team at https://demeng.dev/discord.
+# Thank you for using GrantX!
+# ---------------------------------------------------------------------------------------
+
+config-version: 1
+
+# The number of slots in the menu.
+# Must be a multiple of nine, greater or equal to 9, and less than or equal to 54.
+size: 45
+
+# The title of the menu. Color codes are supported.
+# You can use the %target% placeholder for the target's username.
+title: "Confirm Grant"
+
+# The item that will be used for the GUI's background. Set to "AIR" for no background item.
+background: "AIR"
+
+# The confirm button.
+confirm-button:
+  slots:
+    - 11
+    - 12
+    - 13
+    - 20
+    - 21
+    - 22
+    - 29
+    - 30
+    - 31
+  material: "GREEN_TERRACOTTA"
+  display-name: "&2&lConfirm Grant"
+  lore:
+    - "&7&m-----------------------------------"
+    - "&aPlayer: &f%target%"
+    - "&aRank: &f%rank-stripped-display-name%"
+    - "&aDuration: &f%duration-time%"
+    - "&aReason: &f%reason-stripped-display-name%"
+    - "&7&m-----------------------------------"
+    - "&b&lClick to confirm this grant."
+  glow: false
+
+# The cancel button.
+cancel-button:
+  slots:
+    - 15
+    - 16
+    - 17
+    - 24
+    - 25
+    - 26
+    - 33
+    - 34
+    - 35
+  material: "RED_TERRACOTTA"
+  display-name: "&4&lCancel Grant"
+  lore:
+    - "&7&m-----------------------------------"
+    - "&6Player: &f%target%"
+    - "&6Rank: &f%rank-stripped-display-name%"
+    - "&6Duration: &f%duration-time%"
+    - "&6Reason: &f%reason-stripped-display-name%"
+    - "&7&m-----------------------------------"
+    - "&c&lClick to cancel this grant."
+  glow: false
