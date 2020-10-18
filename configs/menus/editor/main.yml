@@ -1,0 +1,69 @@
+# # # # # # # # # # # # # # # # # # # # # # # # # #
+#   ________                     __    ____  ___  #
+#  /  _____/___________    _____/  |_  \   \/  /  #
+# /   \  __\_  __ \__  \  /    \   __\  \     /   #
+# \    \_\  \  | \// __ \|   |  \  |    /     \   #
+#  \______  /__|  (____  /___|  /__|   /___/\  \  #
+#         \/           \/     \/             \_/  #
+# # # # # # # # # # # # # # # # # # # # # # # # # #
+# |
+# ---------------------------------------------------------------------------------------
+# Welcome to the official "Main Menu" editor menu config file for GrantX!
+# This is where you can change how the main menu of the editor looks.
+# If you are unsure of what something does: https://demeng.dev/grantx/docs
+# Stuck? Getting errors? Contact out support team at https://demeng.dev/discord.
+# Thank you for using GrantX!
+# ---------------------------------------------------------------------------------------
+
+config-version: 1
+
+# The number of slots in the menu.
+# Must be a multiple of nine, greater or equal to 9, and less than or equal to 54.
+size: 9
+
+# The title of the menu. Color codes are supported.
+title: "GrantX Editor"
+
+# The item that will be used for the GUI's background. Set to "AIR" for no background item.
+background: "AIR"
+
+# The button used to go to the menu for editing ranks.
+ranks-button:
+  # The slot of the button. Should be from 1 to the size of the menu.
+  slot: 2
+  # The material of the button.
+  material: NAME_TAG
+  # The display name of the button.
+  display-name: "&9Ranks"
+  # The lore of the button. Set as an empty list or put the first element as "none" to disable.
+  lore:
+    - "&bClick to edit ranks."
+  # If this item should have a fake (hidden) enchantment.
+  glow: false
+
+# The button used to go to the menu for editing servers.
+servers-button:
+  slot: 4
+  material: REDSTONE
+  display-name: "&9Servers"
+  lore:
+    - "&bClick to edit servers."
+  glow: false
+
+# The button used to go to the menu for editing durations.
+durations-button:
+  slot: 6
+  material: CLOCK
+  display-name: "&9Durations"
+  lore:
+    - "&bClick to edit durations."
+  glow: false
+
+# The button used to go to the menu for editing reasons.
+reasons-button:
+  slot: 8
+  material: OAK_SIGN
+  display-name: "&9Reasons"
+  lore:
+    - "&bClick to edit reasons."
+  glow: false

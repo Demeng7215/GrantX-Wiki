@@ -1,0 +1,105 @@
+# # # # # # # # # # # # # # # # # # # # # # # # # #
+#   ________                     __    ____  ___  #
+#  /  _____/___________    _____/  |_  \   \/  /  #
+# /   \  __\_  __ \__  \  /    \   __\  \     /   #
+# \    \_\  \  | \// __ \|   |  \  |    /     \   #
+#  \______  /__|  (____  /___|  /__|   /___/\  \  #
+#         \/           \/     \/             \_/  #
+# # # # # # # # # # # # # # # # # # # # # # # # # #
+# |
+# ---------------------------------------------------------------------------------------
+# Welcome to the official "Material Selection" menu config file for GrantX!
+# This is where you can change how the material selection menu looks.
+# If you are unsure of what something does: https://demeng.dev/grantx/docs
+# Stuck? Getting errors? Contact out support team at https://demeng.dev/discord.
+# Thank you for using GrantX!
+# ---------------------------------------------------------------------------------------
+
+config-version: 1
+
+# The number of slots in the menu (per page).
+# Must be a multiple of nine, greater or equal to 9, and less than or equal to 54.
+size: 54
+
+# The title of the menu. Color codes are supported.
+title: "Select a Material"
+
+# The item that will be used for the GUI's background. Set to "AIR" for no background item.
+background: "AIR"
+
+# Configuration for the separator, which is a row of items which separate the materials and page controls.
+separator:
+  # Should GrantX add the separator?
+  enabled: true
+  # If the above setting is true- which of the GUI should the separator be in?
+  row: 5
+  # The material of the separator.
+  material: "GRAY_STAINED_GLASS_PANE"
+
+# Configuration for the "previous page" button in the menu.
+previous-page-button:
+  # The slot that this button will be in.
+  slot: 46
+  # The material of the button.
+  material: "LIME_DYE"
+  # The display name of the button.
+  display-name: "&c< Previous Page"
+  # The lore of the item. Set as an empty list or put the first element as "none" to disable.
+  lore: []
+  # If this item should have a fake (hidden) enchantment.
+  glow: true
+  # Overrides for the button if there are no more pages to go back to.
+  no-more-pages:
+    material: "GRAY_DYE"
+    display-name: "&7You are on the first page."
+    lore: []
+    glow: false
+
+# Configuration for the "next page" button in the menu.
+next-page-button:
+  slot: 54
+  material: "LIME_DYE"
+  display-name: "&aNext Page >"
+  lore: []
+  glow: true
+  no-more-pages:
+    material: "GRAY_DYE"
+    display-name: "&7You are on the last page."
+    lore: []
+    glow: false
+
+# The range of slots that may contain materials.
+listing-range:
+  # The first slot of each page that will contain a material.
+  start: 1
+  # The last slot of each page that will contain a material.
+  end: 45
+
+# Configuration for each materials's individual button.
+# The material is locked as the actual material.
+material-button:
+  # Use %material% for the material name.
+  display-name: "&9&l%material%"
+  # Use %material% for the material name.
+  lore:
+    - "&7Click to select."
+  glow: false
+
+# Configuration for the button used to select a specific material via chat.
+custom-button:
+  slot: 50
+  material: "COMPASS"
+  display-name: "&9&lCustom Material"
+  lore:
+    - "&bCan't find a material?"
+    - "&bClick to enter a custom material."
+  glow: true
+
+# The button that goes back to the previous menu.
+back-button:
+  slot: 49
+  material: "ARROW"
+  display-name: "&cBack"
+  lore:
+    - "&7Go back to the previous menu."
+  glow: false

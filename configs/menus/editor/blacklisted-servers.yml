@@ -1,0 +1,108 @@
+# # # # # # # # # # # # # # # # # # # # # # # # # #
+#   ________                     __    ____  ___  #
+#  /  _____/___________    _____/  |_  \   \/  /  #
+# /   \  __\_  __ \__  \  /    \   __\  \     /   #
+# \    \_\  \  | \// __ \|   |  \  |    /     \   #
+#  \______  /__|  (____  /___|  /__|   /___/\  \  #
+#         \/           \/     \/             \_/  #
+# # # # # # # # # # # # # # # # # # # # # # # # # #
+# |
+# ---------------------------------------------------------------------------------------
+# Welcome to the official "Blacklisted Servers Selection" menu config file for GrantX!
+# This is where you can change how the blacklisted servers selection menu looks.
+# If you are unsure of what something does: https://demeng.dev/grantx/docs
+# Stuck? Getting errors? Contact out support team at https://demeng.dev/discord.
+# Thank you for using GrantX!
+# ---------------------------------------------------------------------------------------
+
+config-version: 1
+
+# The number of slots in the menu (per page).
+# Must be a multiple of nine, greater or equal to 9, and less than or equal to 54.
+size: 54
+
+# The title of the menu. Color codes are supported.
+title: "Select Servers"
+
+# The item that will be used for the GUI's background. Set to "AIR" for no background item.
+background: "AIR"
+
+# Configuration for the separator, which is a row of items which separate the servers and page controls.
+separator:
+  # Should GrantX add the separator?
+  enabled: true
+  # If the above setting is true- which of the GUI should the separator be in?
+  row: 5
+  # The material of the separator.
+  material: "GRAY_STAINED_GLASS_PANE"
+
+# Configuration for the "previous page" button in the menu.
+previous-page-button:
+  # The slot that this button will be in.
+  slot: 46
+  # The material of the button.
+  material: "LIME_DYE"
+  # The display name of the button.
+  display-name: "&c< Previous Page"
+  # The lore of the item. Set as an empty list or put the first element as "none" to disable.
+  lore: [ ]
+  # If this item should have a fake (hidden) enchantment.
+  glow: true
+  # Overrides for the button if there are no more pages to go back to.
+  no-more-pages:
+    material: "GRAY_DYE"
+    display-name: "&7You are on the first page."
+    lore: [ ]
+    glow: false
+
+# Configuration for the "next page" button in the menu.
+next-page-button:
+  slot: 54
+  material: "LIME_DYE"
+  display-name: "&aNext Page >"
+  lore: [ ]
+  glow: true
+  no-more-pages:
+    material: "GRAY_DYE"
+    display-name: "&7You are on the last page."
+    lore: [ ]
+    glow: false
+
+# The range of slots that may contain servers.
+listing-range:
+  # The first slot of each page that will contain a server.
+  start: 1
+  # The last slot of each page that will contain a server.
+  end: 45
+
+# Configuration for each server's individual button.
+# You cannot change the glow.
+server-button:
+  # Use %server% for the server's material.
+  material: "%server%"
+  # Use %server% for the server name.
+  display-name: "&9&l%server%"
+  # Use %server% for the server name.
+  lore:
+    - "&bClick to toggle selection."
+
+# Should GrantX display a different lore depending on the current toggle status?
+# This will ignore the above lore setting for the server buttons.
+dynamic-lore:
+  # Enable or disable this feature.
+  enabled: true
+  # The lore that will be used if the server is selected.
+  selected:
+    - "&aSELECTED &b(Click to Unselect)"
+  # The lore that will be used if the server is not selected.
+  not-selected:
+    - "&cNOT SELECTED &b(Click to Select)"
+
+# The button that goes back to the previous menu.
+back-button:
+  slot: 50
+  material: "EMERALD_BLOCK"
+  display-name: "&a&lSave"
+  lore:
+    - "&7Save and go back."
+  glow: true

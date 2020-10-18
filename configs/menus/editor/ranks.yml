@@ -1,0 +1,355 @@
+# # # # # # # # # # # # # # # # # # # # # # # # # #
+#   ________                     __    ____  ___  #
+#  /  _____/___________    _____/  |_  \   \/  /  #
+# /   \  __\_  __ \__  \  /    \   __\  \     /   #
+# \    \_\  \  | \// __ \|   |  \  |    /     \   #
+#  \______  /__|  (____  /___|  /__|   /___/\  \  #
+#         \/           \/     \/             \_/  #
+# # # # # # # # # # # # # # # # # # # # # # # # # #
+# |
+# ---------------------------------------------------------------------------------------
+# Welcome to the official ranks editor menu config file for GrantX!
+# This is where you can change how the rank selection menu for the editor looks.
+# If you are unsure of what something does: https://demeng.dev/grantx/docs
+# Stuck? Getting errors? Contact out support team at https://demeng.dev/discord.
+# Thank you for using GrantX!
+# ---------------------------------------------------------------------------------------
+
+config-version: 1
+
+# The number of slots in the menu.
+# Must be a multiple of nine, greater or equal to 9, and less than or equal to 54.
+size: 54
+
+# The title of the menu. Color codes are supported.
+# Use %id% for the identifier of the rank being edited. Warning: It may go over Minecraft's 32 character limit!
+title: "Editing Rank: %id%"
+
+# The item that will be used for the GUI's background. Set to "AIR" for no background item.
+background: "AIR"
+
+# Configuration for the Info button.
+info-button:
+  # The slot of the button.
+  slot: 5
+  # The material of the button.
+  material: "NAME_TAG"
+  # The display name of the button. You can use the %id% placeholder for the rank's identifier.
+  display-name: "&b&lYou are editing the &f&l%id% &b&lrank."
+  # The lore of the button. Set as an empty list or put the first element as "none" to disable.
+  lore: []
+  # If this button should have a fake (hidden) enchantment.
+  glow: true
+
+# Configuration for the Toggle Type button, used for making the rank an actual rank or a permission node.
+type-button:
+  slot: 11
+  material: "CREEPER_SPAWN_EGG"
+  display-name: "&9&lChange Type"
+  # You can use %current% for the current setting.
+  lore:
+    - "&bClick to toggle between Rank or Permission."
+    - ""
+    - "&7Changing this to Rank will make the rank grant"
+    - "&7an actual rank, and changing this to a"
+    - "&7Permission will make the rank grant a single"
+    - "&7permission node."
+    - ""
+    - "&3Current: &f%current%"
+  glow: false
+
+# Configuration for the Change Real Name button, used for changing the group name or the permission node of the rank.
+real-name-button:
+  slot: 13
+  material: "WRITABLE_BOOK"
+  display-name: "&9&lChange Real Name"
+  lore:
+    - "&bClick to change real name."
+    - ""
+    - "&7This value should be the group name in your"
+    - "&7permissions plugin if the type value is Rank,"
+    - "&7or a permission node if the type value is"
+    - "&7permission."
+    - ""
+    - "&3Current: &f%current%"
+  glow: false
+
+# Configuration for the Change Weight button, used for changing the weight/priority of the rank.
+weight-button:
+  slot: 15
+  material: "GOLD_INGOT"
+  display-name: "&9&lChange Weight"
+  lore:
+    - "&bClick to change weight."
+    - ""
+    - "&7Rank weight determines the order of which"
+    - "&7your ranks are displayed in paginated"
+    - "&7menus as well as many other things."
+    - "&7Generally, the higher the weight, the more"
+    - "&7important the rank is."
+    - ""
+    - "&3Current: &f%current%"
+  glow: false
+
+# Configuration for the Change Slot button, used for changing the slot of the rank in the grant menu.
+slot-button:
+  slot: 17
+  material: "HEAVY_WEIGHTED_PRESSURE_PLATE"
+  display-name: "&9&lChange Slot"
+  lore:
+    - "&bClick to change slot."
+    - ""
+    - "&7This is which position the rank is displayed"
+    - "&7in inside menus if it is not paginated. By"
+    - "&7default, this setting is ignored unless you"
+    - "&7make the grant menu a one-page menu in config."
+    - ""
+    - "&3Current: &f%current%"
+  glow: false
+
+# Configuration for the Change Material button, used for changing the material of the rank.
+material-button:
+  slot: 20
+  material: "CRAFTING_TABLE"
+  display-name: "&9&lChange Material"
+  lore:
+    - "&bClick to pick a material."
+    - ""
+    - "&7The material that represents this rank in"
+    - "&7GUI menus."
+    - ""
+    - "&3Current: &f%current%"
+  glow: false
+
+# Configuration for the Change Display Name button, used for changing the display name of the rank.
+display-name-button:
+  slot: 22
+  material: "OAK_SIGN"
+  display-name: "&9&lChange Display Name"
+  lore:
+    - "&bClick to change display name."
+    - ""
+    - "&7Display name is the \"nicer\" form of the"
+    - "&7rank's name. It is usually used in GUIs"
+    - "&7and chat messages."
+    - ""
+    - "&3Current: &f%current%"
+  glow: false
+
+# Configuration for the Change Lore button, used for changing the lore of the rank in the grant menu.
+lore-button:
+  slot: 24
+  material: "PAPER"
+  display-name: "&9&lChange Lore"
+  lore:
+    - "&bLeft-click to add line."
+    - "&bRight-click to remove line."
+    - "&bShift-click to reset to default."
+    - "&bSet as \"None\" to disable."
+    - ""
+    - "&7Lore is displayed in the rank's button"
+    - "&7inside the grant GUI. By default, the"
+    - "&7rank will use the default lore as"
+    - "&7defined in menus/grant/ranks.yml."
+    - ""
+    - "&3Current:"
+    - "&f%current%"
+  glow: false
+
+# Configuration for the Change Permission button, used for changing the required permission to grant the rank.
+permission-button:
+  slot: 26
+  material: "BLAZE_POWDER"
+  display-name: "&9&lChange Permission"
+  lore:
+    - "&bClick to change required permission."
+    - "&bSet as \"None\" to disable."
+    - ""
+    - "&7This is the permission node that is required"
+    - "&7to be able to grant this rank. The normal"
+    - "&7grantx.grant permission is still required,"
+    - "&7this is just an additional permission."
+    - ""
+    - "&3Current: &f%current%"
+  glow: false
+
+# Configuration for the Toggle Dummy button, used for toggling if the rank can be granted via the grant GUI.
+dummy-button:
+  slot: 29
+  material: "BEDROCK"
+  display-name: "&9&lToggle Dummy"
+  lore:
+    - "&bClick to toggle if this should be a dummy."
+    - ""
+    - "&7If No, the rank will be able to be granted"
+    - "&7via the grant GUI. If Yes, the rank will"
+    - "&7simply be for aesthetic purposes."
+    - ""
+    - "&3Current: &f%current%"
+  glow: false
+
+# Configuration for the Toggle Glow button, used to toggle if the rank should have a fake enchant.
+glow-button:
+  slot: 31
+  material: "ENCHANTMENT_TABLE"
+  display-name: "&9&lToggle Glow"
+  lore:
+    - "&bClick to toggle glow."
+    - ""
+    - "&7Glow is simply a fake (hidden)"
+    - "&7enchantment applied to the rank's"
+    - "&7item in the grant GUI."
+    - ""
+    - "&3Current: &f%current%"
+  glow: false
+
+# Configure for the Change Blacklisted Servers button, used to pick which servers to hide the rank from.
+blacklisted-servers-button:
+  slot: 33
+  material: "TNT"
+  display-name: "&9&lChange Blacklisted Servers"
+  lore:
+    - "&bClick to change blacklisted servers."
+    - ""
+    - "&7This rank will be completely hidden from all"
+    - "&7selected servers."
+    - ""
+    - "&3Current:"
+    - "&f%current%"
+  glow: false
+
+# The button to delete the rank.
+delete-button:
+  slot: 35
+  material: "ROSE_RED"
+  display-name: "&4&lDelete Rank"
+  lore:
+    - "&cShift-click to delete this rank."
+    - "&6This action is irreversible!"
+  glow: false
+
+# The button to go back to rank listings.
+back-button:
+  slot: 50
+  material: "ARROW"
+  display-name: "&cBack"
+  lore:
+    - "&7Go back to the previous menu."
+  glow: false
+
+# Configuration for the rank list menu, the menu where the rank to edit is chosen.
+list-menu:
+  # The number of slots in the menu (per page).
+  # Must be a multiple of nine, greater or equal to 9, and less than or equal to 54.
+  size: 54
+
+  # The title of the menu. Color codes are supported.
+  title: "Choose a Rank"
+
+  # The item that will be used for the GUI's background. Set to "AIR" for no background item.
+  background: "AIR"
+
+  # Configuration for the separator, which is a row of items which separate the ranks and page controls.
+  separator:
+    # Should GrantX add the separator?
+    enabled: true
+    # If the above setting is true- which of the GUI should the separator be in?
+    row: 5
+    # The material of the separator.
+    material: "GRAY_STAINED_GLASS_PANE"
+
+  # Configuration for the "previous page" button in the menu.
+  previous-page-button:
+    # The slot that this button will be in.
+    slot: 46
+    # The material of the button.
+    material: "LIME_DYE"
+    # The display name of the button.
+    display-name: "&c< Previous Page"
+    # The lore of the item. Set as an empty list or put the first element as "none" to disable.
+    lore: []
+    # If this item should have a fake (hidden) enchantment.
+    glow: true
+    # Overrides for the button if there are no more pages to go back to.
+    no-more-pages:
+      material: "GRAY_DYE"
+      display-name: "&7You are on the first page."
+      lore: []
+      glow: false
+
+  # Configuration for the "next page" button in the menu.
+  next-page-button:
+    slot: 54
+    material: "LIME_DYE"
+    display-name: "&aNext Page >"
+    lore: []
+    glow: true
+    no-more-pages:
+      material: "GRAY_DYE"
+      display-name: "&7You are on the last page."
+      lore: []
+      glow: false
+
+  # The range of slots that may contain ranks.
+  listing-range:
+    # The first slot of each page that will contain a rank.
+    start: 1
+    # The last slot of each page that will contain a rank.
+    end: 45
+
+  # How each rank should be displayed in the menu.
+  # Please check the wiki for a list of placeholders you can use for ranks.
+  rank-button:
+    # Use %rank% for the rank's material.
+    material: "%rank%"
+    # Use %rank% for the name of the rank.
+    display-name: "%rank%"
+    # Set the first element to %rank% to get the lore of the rank.
+    # Set as an empty list or put the first element as "none" to disable.
+    lore:
+      - "&bClick to edit this rank."
+      - "&7&m-----------------------------------"
+      - "&3&lCurrent Settings:"
+      - "  &bID: &f%id%"
+      - "  &bType: &f%type%"
+      - "  &bReal Name: &f%real-name%"
+      - "  &bWeight: &f%weight%"
+      - "  &bSlot: &f%slot%"
+      - "  &bMaterial: &f%material%"
+      - "  &bDisplay Name: &f%display-name%"
+      - "  &bLore: &f%lore-type%"
+      - "  &bPermission: &f%permission%"
+      - "  &bGrantable: &f%grantable%"
+      - "  &bGlow: &f%glow%"
+      - "  &bBlacklisted Servers: &f%blacklisted-servers-count%"
+      - "&7&m-----------------------------------"
+    glow: false
+
+  # Configuration for the "Create Rank" button.
+  create-button:
+    slot: 49
+    material: "EMERALD"
+    display-name: "&9&lCreate Rank"
+    lore:
+      - "&bClick to create a new rank."
+    glow: true
+
+  # Configuration for the "Import Ranks" button, which is basically the "/grantx import" command.
+  import-button:
+    slot: 51
+    material: "NETHER_STAR"
+    display-name: "&9&lImport Ranks"
+    lore:
+      - "&bShift-click to import ranks from"
+      - "&byour permissions plugin. Existing"
+      - "&branks will &b&lnot &bbe overriden."
+    glow: true
+
+  # The button that goes back to the main menu.
+  back-button:
+    slot: 50
+    material: "ARROW"
+    display-name: "&cBack"
+    lore:
+      - "&7Go back to the previous menu."
+    glow: false
