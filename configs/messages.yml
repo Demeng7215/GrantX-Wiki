@@ -1,0 +1,326 @@
+# # # # # # # # # # # # # # # # # # # # # # # # # #
+#   ________                     __    ____  ___  #
+#  /  _____/___________    _____/  |_  \   \/  /  #
+# /   \  __\_  __ \__  \  /    \   __\  \     /   #
+# \    \_\  \  | \// __ \|   |  \  |    /     \   #
+#  \______  /__|  (____  /___|  /__|   /___/\  \  #
+#         \/           \/     \/             \_/  #
+# # # # # # # # # # # # # # # # # # # # # # # # # #
+# |
+# ---------------------------------------------------------------------------------------
+# Welcome to the official messages file for GrantX!
+# This is where you can change how GrantX's messages look.
+# If you are unsure of what something does: https://demeng.dev/grantx/docs
+# Stuck? Getting errors? Contact out support team at https://demeng.dev/discord.
+# Thank you for using GrantX!
+# ---------------------------------------------------------------------------------------
+
+config-version: 7
+
+# The prefix that will be displyed in almost every single message.
+prefix: "&8[&9GrantX&8] &r"
+
+# The message sent when /grantx is ran.
+# Use %version% for the current plugin version.
+# Prefix is not displayed in this message.
+information:
+  - "&9&m-----------------------------------------------------"
+  - "&b&lRunning GrantX v%version% by Demeng"
+  - "&bLink: &fhttps://demeng.dev/grantx"
+  - "&bType &f/grantx help &bfor a list of commands."
+  - "&9&m-----------------------------------------------------"
+
+# The message sent when the help menu is requested.
+# Prefix is not displayed in this message.
+help-menu:
+  - "&9&m-----------------&r &9&lGrantX Commands&r &9&m------------------"
+  - "&b/grantx &7- &fDisplay plugin information."
+  - "&b/grantx help &7- &fShow a list of commands."
+  - "&b/grantx editor &7- &fOpen the in-game GUI editor."
+  - "&b/grantx logs [issuer] &7- View the latest grants."
+  - "&b/grantx delete <id> &7- &fDelete the grant from database."
+  - "&b/grantx import &7- &fImport ranks from your permissions plugin."
+  - "&b/grantx addProt <user> &7- &fProtect the player."
+  - "&b/grantx removeProt <user> &7- &fStop protecting the player."
+  - "&b/grantx updateCache &7- &fForcily updates local cache."
+  - "&b/grantx reload &7- &fReload all configuration files."
+  - "&b/grant <player> &7- &fGrant a player a rank or permission."
+  - "&b/grants <player> &7- &fView a player's grants and revoke them."
+  - "&9&m-----------------------------------------------------"
+
+# When the console executes a players-only command.
+not-player: "&bYou must be a player to execute that command."
+
+# If the player does not have permission for the command.
+# Use %permission% for the required permission node.
+no-permission: "&bYou need the &f%permission% &bpermission to use that command."
+
+# If an invalid subcommand is provided.
+invalid-subcommand: "&bUnrecognized subcommand. Type &f/grantx help &bfor help."
+
+# The player did not provide the required amount of valid arguments.
+# Use %usage% for the correct/expected usage.
+invalid-args: "&bIncorrect usage. Did you mean: &f%usage%"
+
+# If the grant is cancelled during the confirmation stage.
+grant-cancelled: "&bGrant activation has been cancelled."
+
+# When a grant revocation is cancelled during the confirmation stage.
+revoke-cancelled: "&bGrant revocation has been cancelled."
+
+# Message sent to the grant revoker when revocation has been confirmed.
+grant-revoked: "&bGrant has been successfully revoked."
+
+# If the target player has never joined the server before.
+# Use %player% for the target player's name.
+invalid-player: "&f%player% &bhas never joined the server before."
+
+# Messages sent if a provided rank, server, duration, or reason is invalid (doesn't exist or is dummy).
+invalid-rank: "&bYou cannot grant the &f%rank% &brank."
+invalid-server: "&bYou cannot grant the &f%server% &bserver."
+invalid-duration: "&bYou cannot grant the &f%duration% &bduration."
+invalid-reason: "&bYou cannot grant the &f%reason% &breason."
+
+# Notification messages send when the status of a grant related to the user changes.
+# All messages in this section should be in a string LIST format, instead of just a single string.
+# Any of these can have their first element set to "none" for no message.
+# Prefix is not shown in these messages.
+notifications:
+  # Notifications sent to the grant's target.
+  target:
+    # When the grant is activated.
+    activated:
+      - "&a&lYou were granted the &f&l%rank-stripped-display-name% &a&lrank!"
+    # When the grant has expired.
+    expired:
+      - "&6&lYour &f&l%rank-stripped-display-name% &6&lrank has expired."
+    # When the grant has been revoked.
+    revoked:
+      - "&c&lYour &f&l%rank-stripped-display-name% &c&lrank has been revoked by &f&l%revoker%&c&l."
+  # Notifications sent to the grant's issuer.
+  issuer:
+    activated:
+      - "&8&m-----------------------------------------------------"
+      - "&b&lYou granted &f&l%target% &b&lthe &f&l%rank-stripped-display-name% &b&lrank!"
+      - "&3Duration: &7%duration-time%"
+      - "&3Expiry: &7%expiration%"
+      - "&3Reason: &7%reason-stripped-display-name%"
+      - "&8&m-----------------------------------------------------"
+    expired:
+      - "none"
+    revoked:
+      - "none"
+
+# Messages sent if the console requests the grants of a player.
+# Prefix is not displayed in these messages.
+console-grants:
+  header:
+    - "&r                    &9Past 100 Grants of %target%:"
+    - "&3  Date  |  Status  |  Issuer  |  Rank  |  Server |  Duration  |  Reason  "
+  format: "&b%date% &7| &b%status% &7| &b%issuer% &7| &b%rank-stripped-display-name% &7| &b%server-stripped-display-name% &7| &b%duration-time% &7| &b%reason-stripped-display-name%"
+  footer:
+    - ""
+
+# If the provided grant ID is not a number or does not exist in the database.
+# Use %id% for the grant ID that was entered.
+invalid-grant: "&bGrant &f%id% &bdoes not exist in the database."
+
+# When grants have been deleted using either the delete or purge command.
+# Use %amount% for the number of grants deleted.
+grants-deleted: "&f%amount% &bgrant(s) have been deleted from the database."
+
+# If the import command is executed without the confirmation argument.
+confirm-import:
+  # Uninteractable message sent to console if import is not confired.
+  console-message: "&bType &f/grantx import confirm &bto confirm import."
+  # The message that will be displayed normally.
+  message: "&bAre you sure you want to import all ranks from your permissions plugin into GrantX?"
+  # The text for the confirm button.
+  confirm-button: "&a&l [CONFIRM] "
+  # The text for the cancel button.
+  cancel-button: " &c&l[CANCEL]"
+
+# The message sent when all ranks have been imported.
+ranks-imported: "&bRanks have been successfully imported."
+
+# Import has been cancelled.
+import-cancelled: "&bImport cancelled."
+
+# If the import has already been confirmed or cancelled via the interactive messageby the player in the past 30 seconds.
+import-message-already-used: "&bRun &f/grantx import &bto import again."
+
+# If somebody tries to grant or view the grants of a protected player.
+protected-player: "&f%player% &bis protected."
+
+# If the addProtection/removeProtection command is executed on an already protected / not protected player.
+already-protected: "&f%player% &bis already protected."
+already-not-protected: "&f%player% &bis not protected."
+
+# When protection has been added/removed to/from a player.
+protection-added: "&f%player% &bis now protected."
+protection-removed: "&f%player% &bis no longer protected."
+
+# After cache has been updated via command.
+cache-updated: "&bCaches have been forcibly updated."
+
+# The message that will be sent when all config files have been reloaded.
+successfully-reloaded: "&bAll configuration files reloaded."
+
+# Configuration for messages (and titles) sent when a player chooses to enter a custom duration.
+custom-duration-waiter:
+  title: "&9Enter Duration"
+  subtitle: "&bLeft-click to cancel."
+  fade-in: 10
+  stay: 6000
+  fade-out: 10
+  message: "&bSay in chat what you would like to set the duration to. Enter &fforever &bfor permanent duration."
+  invalid: "&bThat is not a valid time. Try something like &f1 month 2 days&b."
+
+# Configuration for messages (and titles) sent when a player chooses to enter a custom reason.
+custom-reason-waiter:
+  title: "&9Enter Reason"
+  subtitle: "&bLeft-click to cancel."
+  fade-in: 10
+  stay: 6000
+  fade-out: 10
+  message: "&bSay in chat what you would like to set the reason to."
+
+# Configuration for messages (and titles) sent when a player wants to choose a custom material via the editor.
+material-waiter:
+  title: "&9Enter Material Name"
+  subtitle: "&bLeft-click to cancel."
+  fade-in: 10
+  stay: 6000
+  fade-out: 10
+  message: "&bSay in chat what you would like to set the material to."
+  invalid-material: "&bInvalid material. Refer to the wiki for a list of materials."
+
+# Configuration for messages (and titles) sent when a player creates a rank, server, duration, or reason via the editor.
+# This is sent when GrantX waits for a chat input from the user.
+id-waiter:
+  # The "title" that is displayed to the user.
+  title: "&9Enter Name"
+  # The "subtitle" that is displayed to the user.
+  subtitle: "&bLeft-click to cancel."
+  # The number of ticks (20/sec) the title and subtitle will take to fade in.
+  fade-in: 10
+  # The number of ticks the title and subtitle will stay on the screen.
+  # The title is automatically cleared if an input is received.
+  stay: 6000
+  # The number of ticks the title and subtitle will take to fade out.
+  fade-out: 10
+  # The message that is sent to the user in chat.
+  # Use %type% for the type of object being created. (eg. rank, server, duration, reason)
+  message: "&bSay in chat what you would like your new %type% to be called."
+  # If a rank with the given identifier already exists in the database.
+  already-exists: "&bThat name is already being used."
+  # If the rank identifier contains non-alphanumeric characters other than dashes and underscores.
+  invalid-id: "&bName may only contain alphanumeric characters, dashes, and underscores."
+
+# Successful creation messages. Use %id% for the identifier chosen.
+rank-created: "&bRank &f%id% &bhas been successfully created."
+server-created: "&bServer &f%id% &bhas been successfully created."
+duration-created: "&bDuration &f%id% &bhas been successfully created."
+reason-created: "&bReason &f%id% &bhas been successfully created."
+
+# Configuration for messages (and titles) sent when a player edits the real name via the editor.
+real-name-waiter:
+  title: "&9Enter Real Name"
+  subtitle: "&bLeft-click to cancel."
+  fade-in: 10
+  stay: 6000
+  fade-out: 10
+  message: "&bSay in chat what you would like to set the real name to."
+
+# Configuration for messages (and titles) sent when a player edits a duration's time via the editor.
+time-waiter:
+  title: "&9Enter Time"
+  subtitle: "&bLeft-click to cancel."
+  fade-in: 10
+  stay: 6000
+  fade-out: 10
+  message: "&bSay in chat what you would like to set the time to. Enter &fforever &bfor permanent duration."
+  invalid: "&bThat is not a valid time. Try something like &f1 month 2 days&b."
+
+# Configuration for messages (and titles) sent when a player edits the weight via the editor.
+weight-waiter:
+  title: "&9Enter Weight"
+  subtitle: "&bLeft-click to cancel."
+  fade-in: 10
+  stay: 6000
+  fade-out: 10
+  message: "&bSay in chat what you would like to set the weight to."
+
+# Configuration for messages (and titles) sent when a player edits the slot via the editor.
+slot-waiter:
+  title: "&9Enter Slot"
+  subtitle: "&bLeft-click to cancel."
+  fade-in: 10
+  stay: 6000
+  fade-out: 10
+  message: "&bSay in chat what you would like to set the slot to."
+  out-of-bounds: "&bSlot must be between -1 and %max%."
+
+# Configuration for messages (and titles) sent when a player edits the display name via the editor.
+display-name-waiter:
+  title: "&9Enter Display Name"
+  subtitle: "&bLeft-click to cancel."
+  fade-in: 10
+  stay: 6000
+  fade-out: 10
+  message: "&bSay in chat what you would like to set the display name to."
+
+# Configuration for messages (and titles) sent when a player edits the permission via the editor.
+permission-waiter:
+  title: "&9Enter Permission"
+  subtitle: "&bLeft-click to cancel."
+  fade-in: 10
+  stay: 6000
+  fade-out: 10
+  message: "&bSay in chat what you would like to set the permission to."
+
+# Configuration for messages (and titles) sent when a player adds a new line of lore via the editor.
+lore-waiter:
+  title: "&9Enter New Line"
+  subtitle: "&bLeft-click to cancel."
+  fade-in: 10
+  stay: 6000
+  fade-out: 10
+  message: "&bSay in chat what you would like to add to the current lore."
+
+# The message sent if the provided input (requested by a waiter) is not a valid integer or long.
+waiter-input-not-number: "&bInput must be a number."
+
+# Words or short phrases used in the plugin- this is useful if your server is a different language.
+words:
+  active: "Active"
+  expired: "Expired"
+  revoked: "Revoked"
+  yes: "Yes"
+  no: "No"
+  rank: "rank"
+  permission: "permission"
+  server: "server"
+  duration: "duration"
+  reason: "reason"
+  none: "None"
+  default: "Default"
+  custom: "Custom"
+  permanent: "Permanent"
+  years: "years"
+  year: "year"
+  months: "months"
+  month: "month"
+  weeks: "weeks"
+  week: "week"
+  days: "days"
+  day: "day"
+  hours: "hours"
+  hour: "hour"
+  minutes: "minutes"
+  minute: "minute"
+  seconds: "seconds"
+  second: "second"
+  not-applicable: "N/A"
+  never: "Never"
+  console: "Console"

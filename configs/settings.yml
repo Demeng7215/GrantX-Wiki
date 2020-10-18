@@ -1,0 +1,170 @@
+# # # # # # # # # # # # # # # # # # # # # # # # # #
+#   ________                     __    ____  ___  #
+#  /  _____/___________    _____/  |_  \   \/  /  #
+# /   \  __\_  __ \__  \  /    \   __\  \     /   #
+# \    \_\  \  | \// __ \|   |  \  |    /     \   #
+#  \______  /__|  (____  /___|  /__|   /___/\  \  #
+#         \/           \/     \/             \_/  #
+# # # # # # # # # # # # # # # # # # # # # # # # # #
+# |
+# ---------------------------------------------------------------------------------------
+# Welcome to the official settings file for GrantX!
+# This is where you can change how GrantX functions.
+# If you are unsure of what something does: https://demeng.dev/grantx/docs
+# Stuck? Getting errors? Contact out support team at https://demeng.dev/discord.
+# Thank you for using GrantX!
+# ---------------------------------------------------------------------------------------
+
+config-version: 9
+
+# License key required for GrantX to function IF PURCHASED ON MC-MARKET.
+# IGNORE THIS IF YOU PURCHASED FROM SPIGOT.
+# IGNORE THIS IF YOU PURCHASED FROM SPIGOT.
+# IGNORE THIS IF YOU PURCHASED FROM SPIGOT.
+license-key: "none"
+
+# The name of this server. Used for the blacklisted servers feature.
+server-name: "MyServer"
+
+# The commands that are executed on grant status change.
+# Typically you should put the commands that make changes to the target in your permissions plugin.
+# You can also perform additional commands if you wish.
+# GLOBAL RANK COMMANDS MUST BE SET OR PLUGIN WILL NOT FUNCTION.
+commands:
+
+  # Commands executed when grant becomes active.
+  active:
+    # Commands executed when the grant is for a rank.
+    rank:
+      # Commands executed if grant is global.
+      global:
+        - "none"
+      # Commands executed if grant is for a specific server.
+      server:
+        - "none"
+    # Commands executed if grant is for a permission.
+    permission:
+      global:
+        - "none"
+      server:
+        - "none"
+
+  # Commands executed when grant expires.
+  expired:
+    rank:
+      global:
+        - "none"
+      server:
+        - "none"
+    permission:
+      global:
+        - "none"
+      server:
+        - "none"
+
+  # Commands executed when grant is revoked.
+  revoked:
+    rank:
+      global:
+        - "none"
+      server:
+        - "none"
+    permission:
+      global:
+        - "none"
+      server:
+        - "none"
+
+# Storage settings- how GrantX should store data.
+storage:
+
+  # The storage method that GrantX will use. Please pick one of the following options:
+  # |
+  # => LOCAL DATABASES - No further configuration required.
+  # h2 - Store data locally in the GrantX folder.
+  # |
+  # => REMOTE DATABASES - Required for cross-server synchronization.
+  # mysql - Store data remotely in a regular MySQL database.
+  # mariadb - Similar to MySQL, but uses the MariaDB JDBC driver. Better performance.
+  method: "h2"
+
+  # Credentials to your database.
+  host: "localhost"
+  port: 3306
+  database: "minecraft"
+  username: "root"
+  password: "root"
+
+  # Additional options GrantX will append to the JDBC connection URL.
+  # Do not modify unless you were instructed to or know what you are doing.
+  # For MySQL/MariaDB, these options are added after "jdbc:mysql://{host}:{port}/{database}".
+  # For H2, these options are added after "jdbc:h2:{dir}database".
+  additional-options: "?autoReconnect=true&useSSL=false"
+
+  # The maximum pool size for HikariCP.
+  # Do not modify unless you were instructed to or know what you are doing.
+  max-pool-size: 10
+
+# The default grant that will be activated on join if the player does not have any existing grants.
+default-grant:
+  # If this feature should be enabled.
+  enabled: false
+  # The number of TICKS to delay before this grant is activated.
+  # 1 second = 20 ticks
+  delay: 10
+  # ID of the rank to grant.
+  rank: "default"
+  # ID of the server.
+  server: "global"
+  # ID of the duration.
+  duration: "permanent"
+  # ID of the reason.
+  reason: "custom:Default Grant"
+
+# %next-group% is a placeholder that returns s player's next rank after their grant expires or is revoked.
+# This placeholder can only be used in global/server RANK grants. Permission grants will be ignored.
+retrieve-next-group:
+  # If this feature should be enabled.
+  # Don't enable this unless you plan on using the placeholder for best performance.
+  enabled: false
+  # By default, %next-group% gets the rank with the highest weight.
+  # Enabling this will instead just get their most recent grant.
+  ignore-weight: false
+  # The string to return if there is no next group for the player.
+  default-group: "default"
+
+# How server selection should work.
+# always - Always ask for a server when granting.
+# click - Only ask when the rank is right-clicked.
+# never - Never ask for a server when granting (assume global).
+server-selection-mode: "click"
+
+# The number of seconds between each grant expiration task and expired grants are actually expired.
+grant-status-update-interval: 10
+
+# The number of seconds between each player cache update task and new players are added to the local cache.
+player-cache-update-interval: 300
+
+# Should GrantX check if the database's tables are empty and if so, set defaults?
+set-defaults: true
+
+# The Java Date Format that will be used.
+# GrantX already automatically chooses the best date format for the scenario. Uncomment to use your own.
+# date-format: "E MMMM dd yyyy HH:mm:ss z"
+
+# The number of days before inactive grant data is deleted.
+# Data is "inactive" if its target player has not logged in for the specified amount of days.
+# Set as -1 to disable data deletion.
+inactive-data-deletion-threshold: 90
+
+# If GrantX should upload stack traces to Hastebin instead of printing it out in console.
+use-hastebin-for-errors: true
+
+# The default lore color that will be used if no color is specified.
+default-lore-color: "WHITE"
+
+# If your cursor should be reset to the center of the screen when you switch between GUI menus.
+reset-cursor: false
+
+# If GrantX should check for updates at startup.
+check-for-updates: true
