@@ -29,3 +29,22 @@ A list of placeholders you can use in configuration files. Some placeholders may
 | %server-{placeholder} | Use any server placeholder by adding the **server-** prefix to the placeholder. |
 | %duration-{placeholder} | Use any duration placeholder by adding the **duration-** prefix to the placeholder. |
 | %reason-{placeholder} | Use any reason placeholder by adding the **reason-** prefix to the placeholder. |
+
+### Rank Placeholders 
+| Placeholder | Description |
+|-------------|----------------------------------------------------------------|
+| %id% | The unique identifier of the rank. |
+| %type% | The type of rank- Rank or Permission. |
+| %real-name% | The real name (group/node) of the rank. |
+| %weight% | The weight of the rank. |
+| %slot% | The slot of the rank. |
+| %material% | The name of the material representing the rank. |
+| %display-name% | The display name of the rank. |
+| %stripped-display-name% | The display name of the rank, without color. |
+| %lore-type% | The type of lore- Default, Custom, None.
+| %permission% | The permission required to choose the rank. |
+| %dummy% | If this rank is a dummy- Yes or No. |
+| %grantable% | If this rank is grantable. Exact opposite of dummy. |
+| %glow% | If this rank will glow in GUIs- Yes or No. |
+| %blacklisted-servers% | The servers where this rank cannot be chosen. |
+| %blacklisted-servers-count% | The number of servers where this rank cannot be chosen. |
