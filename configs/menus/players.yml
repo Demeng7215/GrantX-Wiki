@@ -1,0 +1,88 @@
+# # # # # # # # # # # # # # # # # # # # # # # # # #
+#   ________                     __    ____  ___  #
+#  /  _____/___________    _____/  |_  \   \/  /  #
+# /   \  __\_  __ \__  \  /    \   __\  \     /   #
+# \    \_\  \  | \// __ \|   |  \  |    /     \   #
+#  \______  /__|  (____  /___|  /__|   /___/\  \  #
+#         \/           \/     \/             \_/  #
+# # # # # # # # # # # # # # # # # # # # # # # # # #
+# |
+# ---------------------------------------------------------------------------------------
+# Welcome to the official "Player Selection" menu config file for GrantX!
+# This is where you can change how the player selection menu looks.
+# If you are unsure of what something does: https://demeng.dev/grantx/docs
+# Stuck? Getting errors? Contact out support team at https://demeng.dev/discord.
+# Thank you for using GrantX!
+# ---------------------------------------------------------------------------------------
+
+config-version: 1
+
+# The number of slots in the menu (per page).
+# Must be a multiple of nine, greater or equal to 9, and less than or equal to 54.
+size: 54
+
+# The title of the menu. Color codes are supported.
+title: "Select a Player"
+
+# The item that will be used for the GUI's background. Set to "AIR" for no background item.
+background: "AIR"
+
+# Configuration for the separator, which is a row of items which separate the players and page controls.
+separator:
+  # Should GrantX add the separator?
+  enabled: true
+  # If the above setting is true- which of the GUI should the separator be in?
+  row: 5
+  # The material of the separator.
+  material: "GRAY_STAINED_GLASS_PANE"
+
+# Configuration for the "previous page" button in the menu.
+previous-page-button:
+  # The slot that this button will be in.
+  slot: 46
+  # The material of the button.
+  material: "LIME_DYE"
+  # The display name of the button.
+  display-name: "&c< Previous Page"
+  # The lore of the item. Set as an empty list or put the first element as "none" to disable.
+  lore: []
+  # If this item should have a fake (hidden) enchantment.
+  glow: true
+  # Overrides for the button if there are no more pages to go back to.
+  no-more-pages:
+    material: "GRAY_DYE"
+    display-name: "&7You are on the first page."
+    lore: []
+    glow: false
+
+# Configuration for the "next page" button in the menu.
+next-page-button:
+  slot: 54
+  material: "LIME_DYE"
+  display-name: "&aNext Page >"
+  lore: []
+  glow: true
+  no-more-pages:
+    material: "GRAY_DYE"
+    display-name: "&7You are on the last page."
+    lore: []
+    glow: false
+
+# The range of slots that may contain players.
+listing-range:
+  # The first slot of each page that will contain a player.
+  start: 1
+  # The last slot of each page that will contain a player.
+  end: 45
+
+# Configuration for each player's individual button.
+# You can use the %player% placeholder for the player's name.
+player-button:
+  # You can use %skull% for the player's skull, or put a normal material.
+  material: "%skull%"
+  display-name: "&9%player%"
+  lore:
+    - "&bClick to select."
+    # A sweet addition if you have PlaceholderAPI installed. Uncomment to display:
+    # - "&bRank: &f%vault_rank%"
+  glow: false
