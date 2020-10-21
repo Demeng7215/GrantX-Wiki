@@ -9,7 +9,7 @@ List of commands and permissions.
 **Description:** Displays a list of commands.
 
 ### /grantx editor
-**Description:** Opens the in-game rank, server, duration, and reason editor.
+**Description:** Opens the in-game rank, server, duration, and reason editor.</br>
 **Permission:** grantx.editor
 
 ### /grantx logs [issuer]
