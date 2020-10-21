@@ -54,5 +54,5 @@ These permissions are not directly related to any commands.
 ### grantx.bypassprotection
 **Description:** Bypass any protection a player may have.
 
-## grantx.revoke.<rank>
+## grantx.revoke.(rank)
 **Description:** Permission to revoke ranks with the specified ID in grant history menus.
