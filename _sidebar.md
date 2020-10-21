@@ -1,4 +1,5 @@
 * [Overview](README.md)
 * [Getting Started](GettingStarted.md)
+* [Commands and Permissions](CmdsPerms.md)
 * [Configuration](Configuration.md)
 * [Developer API](DeveloperAPI.md)
